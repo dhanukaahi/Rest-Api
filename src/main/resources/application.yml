@@ -7,10 +7,10 @@ spring:
     password: Softgen@123
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
-      idle-timeout: 0
-      validation-timeout: 3000000000
-      max-lifetime: 0
-      connection-timeout: 0
+      idle-timeout: 9000000000000000000
+      validation-timeout: 9000000000000000000
+      max-lifetime: 9000000000000000000
+      connection-timeout: 9000000000000000000
 
 #  jpa:
 #    hibernate:
