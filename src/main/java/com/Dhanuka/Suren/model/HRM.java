@@ -3,12 +3,12 @@ package com.Dhanuka.Suren.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Employees")
-public class Employee {
+@Table(name = "HRM")
+public class HRM {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long HRId;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -18,21 +18,19 @@ public class Employee {
     @Column (name = "password")
     private String password;
 
-    
-
-    public Employee( ) {
+    public HRM() {
 
     }
 
-    public Employee(String firstName, String lastName, String emailId, String password) {
+    public HRM(String firstName, String lastName, String emailId, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
         this.password = password;
     }
 
-    public long getId() {
-        return id;
+    public long getHRId() {
+        return HRId;
     }
 
     public String getFirstName() {
@@ -66,4 +64,6 @@ public class Employee {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }
