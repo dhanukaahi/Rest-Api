@@ -48,6 +48,7 @@ public class HRMController {
         hrm.setFirstName(hrmDtails.getFirstName());
         hrm.setLastName(hrmDtails.getLastName());
         hrm.setEmailId(hrmDtails.getEmailId());
+        hrm.setPassword(hrmDtails.getPassword());
 
         HRM updateHRM = hrmRepository.save(hrm);
 
@@ -56,7 +57,7 @@ public class HRMController {
 
     //delete HRM
     @DeleteMapping("/hrm/{id}")
-    public ResponseEntity<Map<String,Boolean>> deleteEmployee(@PathVariable Long id){
+    public ResponseEntity<Map<String,Boolean>> deleteHRM(@PathVariable Long id){
         HRM hrm = hrmRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("HRM Not Exsit with id :"+id));
 

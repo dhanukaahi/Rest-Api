@@ -8,7 +8,9 @@ public class HRM {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long HRId;
+    private long id;
+    @Column(name = "HRM_Id")
+    private String HRM_Id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -27,10 +29,11 @@ public class HRM {
         this.lastName = lastName;
         this.emailId = emailId;
         this.password = password;
+        this.HRM_Id = HRM_Id;
     }
 
-    public long getHRId() {
-        return HRId;
+    public long getId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -64,6 +67,10 @@ public class HRM {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getHRM_Id() {return HRM_Id;}
+
+    public void setHRM_Id(String HRM_Id){this.HRM_Id = HRM_Id;}
 
 
 }

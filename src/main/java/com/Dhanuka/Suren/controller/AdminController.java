@@ -50,6 +50,7 @@ public class AdminController {
         admin.setFirstName(adminDtails.getFirstName());
         admin.setLastName(adminDtails.getLastName());
         admin.setEmailId(adminDtails.getEmailId());
+        admin.setPassword(adminDtails.getPassword());
 
         Admin updateAdmin = adminRepository.save(admin);
 
